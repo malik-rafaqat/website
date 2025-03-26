@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malik Rafaqat Ali | Furniture Sales Funnel Specialist</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #5D4037;
+            --secondary: #8D6E63;
+            --accent: #D7CCC8;
+            --light: #EFEBE9;
+            --dark: #3E2723;
+            overflow-x: hidden;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+        
+        .bg-wood {
+            background-color: var(--light);
+        }
+        
+        .bg-primary-custom {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .bg-secondary-custom {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1600/800') center/cover no-repeat;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .funnel-step {
+            position: relative;
+            padding: 2rem;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+        
+        .funnel-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .funnel-step::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background-color: var(--primary);
+            border-radius: 10px 0 0 10px;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+        
+        .navbar {
+            background-color: var(--dark) !important;
+        }
+        
+        .footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .form-container {
+            background-color: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .section-heading {
+            position: relative;
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+        
+        .section-heading::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 80px;
+            height: 5px;
+            background-color: var(--primary);
+            border-radius: 10px;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        :root {
+            --primary: #5D4037;
+            --secondary: #8D6E63;
+            --accent: #D7CCC8;
+            --light: #EFEBE9;
+            --dark: #3E2723;
+            overflow-x: hidden;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+        
+        .bg-wood {
+            background-color: var(--light);
+        }
+        
+        .bg-primary-custom {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .bg-secondary-custom {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn-outline-custom {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 12px 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-outline-custom:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .pricing-card {
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .pricing-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .pricing-popular .pricing-header {
+            background-color: var(--dark);
+        }
+        
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        
+        .pricing-price span {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        
+        .pricing-features {
+            padding: 30px;
+        }
+        
+        .pricing-feature {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .pricing-feature i {
+            color: var(--primary);
+            margin-right: 10px;
+        }
+        
+        .pricing-popular {
+            transform: scale(1.05);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .pricing-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #FFAB00;
+            color: white;
+            font-weight: 600;
+            font-size: 0.8rem;
+            padding: 5px 15px;
+            border-radius: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .lead-magnet-box {
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .lead-magnet-img {
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .download-preview {
+            background-color: var(--accent);
+            padding: 30px;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        
+        .download-preview:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        
+        .preview-page {
+            width: 100%;
+            height: 150px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-radius: 5px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .consultation-card {
+            border-radius: 15px;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 40px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .consultation-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .consultation-feature i {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255,255,255,0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            margin-right: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .section-heading {
+            position: relative;
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+        
+        .section-heading::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 80px;
+            height: 5px;
+            background-color: var(--primary);
+            border-radius: 10px;
+        }
+        
+        .text-center .section-heading::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .btn-primary-custom:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Malik Rafaqat Ali</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#process">Process</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <h1 class="display-4 fw-bold text-white mb-4">Furniture-Focused Ecom Funnels By Malik Rafaqat, That Convert Browsers Into Buyers</h1>
+                    <p class="lead text-white mb-5">I specialize exclusively in creating high-converting sales funnels for furniture retailers, increasing your store's revenue substantially.</p>
+                    <a href="#contact" class="btn btn-primary-custom btn-lg">Book Your Free Strategy Call</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-wood" id="services">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Furniture-Specific Sales Funnel Solutions</h2>
+                <p class="lead">Tailored strategies that understand the unique challenges of furniture retail</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <div class="text-center">
+                            <i class="fas fa-chair feature-icon"></i>
+                            <h3 class="h4 mb-3">Furniture-Specific Expertise</h3>
+                            <p>I understand the unique buying cycle of furniture purchases and create funnels that match your customers' decision-making process.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <div class="text-center">
+                            <i class="fas fa-bullseye feature-icon"></i>
+                            <h3 class="h4 mb-3">Targeted Traffic Generation</h3>
+                            <p>Drive qualified traffic to your store with campaigns designed specifically for furniture buyers in your local market.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <div class="text-center">
+                            <i class="fas fa-shopping-cart feature-icon"></i>
+                            <h3 class="h4 mb-3">Conversion Optimization</h3>
+                            <p>Transform website visitors into showroom visitors and ultimately paying customers with my proven conversion strategies.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <div class="text-center">
+                            <i class="fas fa-envelope-open-text feature-icon"></i>
+                            <h3 class="h4 mb-3">Furniture Customer Nurturing</h3>
+                            <p>I develop relationships with potential customers over the longer furniture buying cycle with targeted email sequences.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <div class="text-center">
+                            <i class="fas fa-chart-line feature-icon"></i>
+                            <h3 class="h4 mb-3">Sales Analytics</h3>
+                            <p>Track every step of your customer journey with detailed analytics that show exactly where your furniture sales are coming from.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <div class="text-center">
+                            <i class="fas fa-users feature-icon"></i>
+                            <h3 class="h4 mb-3">Showroom-to-Website Integration</h3>
+                            <p>I create seamless experiences between your physical showroom and online presence to capture customers at every touchpoint.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-5" id="process">
+        <div class="container py-5">
+            <h2 class="section-heading display-5 fw-bold">My Proven Furniture Sales Funnel Process</h2>
+            <p class="lead mb-5">I've refined my process through years of working exclusively with furniture retailers</p>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="funnel-step">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="step-number">1</span>
+                            <h3 class="h4 mb-0">Furniture Market Analysis</h3>
+                        </div>
+                        <p>I analyze your local furniture market, competitors, and customer demographics to identify unique opportunities for your store.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="funnel-step">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="step-number">2</span>
+                            <h3 class="h4 mb-0">Funnel Strategy Development</h3>
+                        </div>
+                        <p>I create a customized sales funnel strategy based on your furniture inventory, price points, and target customer profiles.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="funnel-step">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="step-number">3</span>
+                            <h3 class="h4 mb-0">Landing Page Creation</h3>
+                        </div>
+                        <p>I design high-converting landing pages that showcase your furniture collections and prompt visitors to take action.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="funnel-step">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="step-number">4</span>
+                            <h3 class="h4 mb-0">Traffic Generation</h3>
+                        </div>
+                        <p>I implement targeted advertising campaigns to drive qualified furniture buyers to your sales funnel.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="funnel-step">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="step-number">5</span>
+                            <h3 class="h4 mb-0">Lead Nurturing</h3>
+                        </div>
+                        <p>I develop automated email sequences that nurture leads through the furniture buying process with valuable content.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="funnel-step">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="step-number">6</span>
+                            <h3 class="h4 mb-0">Optimization & Scaling</h3>
+                        </div>
+                        <p>I continuously analyze performance data and optimize your funnel to increase conversions and scale your furniture sales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-5 bg-wood" id="pricing">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Transparent Pricing for My Furniture Retail Clients</h2>
+                <p class="lead">Tailored solutions for furniture stores of all sizes, with no hidden fees</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="pricing-card h-100">
+                        <div class="pricing-header">
+                            <h3>Starter</h3>
+                            <div class="pricing-price">$1,997<span>/month</span></div>
+                            <p class="mb-0">For small furniture stores just getting started with digital marketing</p>
+                        </div>
+                        <div class="pricing-features">
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Custom Sales Funnel Development</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>1 Landing Page Design + Coded Version</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Local SEO Optimization</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Email Nurture Sequence (5 Emails)</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Facebook & Instagram Ad Management</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Monthly Performance Reports</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Monthly Strategy Call</span>
+                            </div>
+                            <div class="mt-4 text-center">
+                                <a href="#contact" class="btn btn-outline-custom">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="pricing-card pricing-popular h-100">
+                        <div class="pricing-badge">MOST POPULAR</div>
+                        <div class="pricing-header">
+                            <h3>Growth</h3>
+                            <div class="pricing-price">$3,497<span>/month</span></div>
+                            <p class="mb-0">For established furniture retailers ready to scale their business</p>
+                        </div>
+                        <div class="pricing-features">
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Advanced Multi-Stage Funnel</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>3 Custom Landing Pages</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Google & Local SEO Optimization</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Email Nurture Sequence (10 Emails)</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Full Social Media Ad Management</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Google Ads Management</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Retargeting Campaigns</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Bi-Weekly Strategy Calls</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Showroom Visit Tracking</span>
+                            </div>
+                            <div class="mt-4 text-center">
+                                <a href="#contact" class="btn btn-primary-custom">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="pricing-card h-100">
+                        <div class="pricing-header">
+                            <h3>Premium</h3>
+                            <div class="pricing-price">$5,997<span>/month</span></div>
+                            <p class="mb-0">For large furniture retailers with multiple locations</p>
+                        </div>
+                        <div class="pricing-features">
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Complete Omnichannel Strategy</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>5+ Custom Landing Pages</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Advanced SEO & Content Strategy</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Segmented Email Campaigns</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Full Paid Media Management</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Conversion Rate Optimization</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Customer Journey Mapping</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Weekly Strategy Calls</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Dedicated Account Manager</span>
+                            </div>
+                            <div class="pricing-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>In-Store Digital Integration</span>
+                            </div>
+                            <div class="mt-4 text-center">
+                                <a href="#contact" class="btn btn-outline-custom">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <p class="lead">Need a custom solution for your furniture store?</p>
+                <a href="#contact" class="btn btn-primary-custom">Request Custom Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation Section -->
+    <section class="py-5 bg-wood" id="contact">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Your Free Furniture Sales Funnel Strategy Session</h2>
+                <p class="lead">Book a complimentary 30-minute consultation with furniture marketing specialist Malik Rafaqat Ali</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="consultation-card h-100">
+                        <h3 class="h2 mb-4">What You'll Get From Your Strategy Session:</h3>
+                        
+                        <div class="consultation-feature">
+                            <i class="fas fa-search"></i>
+                            <div>
+                                <h4 class="h5">Furniture Market Analysis</h4>
+                                <p class="mb-0">I'll analyze your local market and competition to identify opportunities</p>
+                            </div>
+                        </div>
+                        
+                        <div class="consultation-feature">
+                            <i class="fas fa-route"></i>
+                            <div>
+                                <h4 class="h5">Custom Funnel Roadmap</h4>
+                                <p class="mb-0">I'll outline a tailored sales funnel strategy for your furniture store</p>
+                            </div>
+                        </div>
+                        
+                        <div class="consultation-feature">
+                            <i class="fas fa-bullseye"></i>
+                            <div>
+                                <h4 class="h5">Traffic Generation Plan</h4>
+                                <p class="mb-0">I'll show you how to attract your ideal furniture customers</p>
+                            </div>
+                        </div>
+                        
+                        <div class="consultation-feature">
+                            <i class="fas fa-calculator"></i>
+                            <div>
+                                <h4 class="h5">ROI Projection</h4>
+                                <p class="mb-0">I'll estimate the return on investment for your sales funnel</p>
+                            </div>
+                        </div>
+                        
+                        <div class="consultation-feature">
+                            <i class="fas fa-tasks"></i>
+                            <div>
+                                <h4 class="h5">30-Day Implementation Plan</h4>
+                                <p class="mb-0">I'll provide a step-by-step plan to get started right away</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-lg h-100">
+                        <div class="card-body p-4 p-lg-5">
+                            <h3 class="card-title mb-4">Schedule Your Free Strategy Session</h3>
+                            
+                            <form>
+                                <div class="mb-3">
+                                    <label for="consultName" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="consultName">
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="consultEmail" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="consultEmail">
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="consultPhone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="consultPhone">
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="consultStore" class="form-label">Furniture Store Name</label>
+                                    <input type="text" class="form-control" id="consultStore">
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="consultWebsite" class="form-label">Website URL (if applicable)</label>
+                                    <input type="url" class="form-control" id="consultWebsite">
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label class="form-label">Current Monthly Revenue</label>
+                                    <select class="form-select">
+                                        <option>Less than $50,000/month</option>
+                                        <option>$50,000 - $100,000/month</option>
+                                        <option>$100,000 - $250,000/month</option>
+                                        <option>$250,000 - $500,000/month</option>
+                                        <option>$500,000+/month</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="consultGoals" class="form-label">What are your biggest marketing challenges?</label>
+                                    <textarea class="form-control" id="consultGoals" rows="3"></textarea>
+                                </div>
+                                
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary-custom py-3 px-5">Book My Strategy Session</button>
+                                    <p class="mt-3 small text-muted">No obligation. 100% free consultation.</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h4 class="mb-4">Malik Rafaqat Ali</h4>
+                    <p>Specialized sales funnel freelancer exclusively serving furniture retailers. I help furniture stores increase revenue through targeted customer acquisition and conversion strategies.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#services" class="text-white text-decoration-none">Services</a></li>
+                        <li class="mb-2"><a href="#process" class="text-white text-decoration-none">Process</a></li>
+                        <li class="mb-2"><a href="#results" class="text-white text-decoration-none">Results</a></li>
+                        <li class="mb-2"><a href="#testimonials" class="text-white text-decoration-none">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <div class="mt-4">
+                        <h5 class="mb-3">Subscribe to My Newsletter</h5>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-primary-custom" type="button">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Malik Rafaqat Ali. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // Select all navigation links with hashes
+          document.querySelectorAll('.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+              // Prevent default anchor behavior
+              e.preventDefault();
+        
+              // Get the target section's ID from the href attribute
+              const targetId = this.getAttribute('href').substring(1);
+              const targetSection = document.getElementById(targetId);
+        
+              if (targetSection) {
+                // Smooth scroll to the section
+                window.scrollTo({
+                  top: targetSection.offsetTop - 70, // Adjust for fixed navbar offset
+                  behavior: "smooth"
+                });
+        
+                // Update active class for navigation
+                document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+              }
+            });
+          });
+        });
+    </script>
+
+</body>
+</html>
